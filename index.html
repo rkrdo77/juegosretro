@@ -5,24 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartucho NFC Retro</title>
     <style>
-        body { background-color: #121212; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #ffcc00; }
-        .box { background: #1e1e1e; padding: 20px; border-radius: 10px; display: inline-block; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        input { margin: 10px 0; padding: 10px; background: #333; color: white; border: 1px solid #555; border-radius: 5px; }
-        button { background: #e50914; color: white; border: none; padding: 12px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #b20710; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #game {
+            width: 100%;
+            max-width: 600px;
+            height: 70vh;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #ffcc00;
+        }
     </style>
 </head>
 <body>
 
-    <h1>🎮 Consola NFC Retro</h1>
-    <p>Inserta tu cartucho o selecciona el juego para comenzar.</p>
+    <h2>🎮 Cargando Cartucho NFC...</h2>
 
-    <div class="box">
-        <h3>Cargar ROM de juego</h3>
-        <input type="file" id="romFile" accept=".nes,.smc,.sfc"><br>
-        <button onclick="alert('Selecciona tu archivo ROM arriba y cárgalo en tu emulador preferido.')">Iniciar Juego</button>
-    </div>
+    <div id="game"></div>
+
+    <!-- Script oficial de EmulatorJS para correr juegos web -->
+    <script>
+        EJS_player = "#game";
+        // Aquí puedes cambiar el enlace de la ROM según el juego de tu cartucho
+        EJS_gameUrl = "https://example.com/tu-juego.nes"; 
+        EJS_core = "nes"; // Cambia a "snes" si es de Super Nintendo (.smc)
+        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartucho NFC Retro</title>
+    <title>Super Mario - Cartucho NFC</title>
     <style>
         body {
             margin: 0;
@@ -19,30 +19,22 @@
             overflow: hidden;
         }
         #game {
-            width: 100%;
-            max-width: 600px;
-            height: 70vh;
-        }
-        h2 {
-            margin: 10px 0;
-            font-size: 1.2rem;
-            color: #ffcc00;
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
 
-    <h2>🎮 Cargando Cartucho NFC...</h2>
-
     <div id="game"></div>
 
-    <script>
-        EJS_player = "#game";
-        EJS_gameUrl = "mario.smc"; 
-        EJS_core = "snes"; 
-        EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/";
+    <script type="text/javascript">
+        EJS_player = '#game';
+        EJS_gameUrl = 'mario.smc';
+        EJS_core = 'snes';
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
     </script>
-    <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 
 </body>
 </html>

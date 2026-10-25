@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario - Cartucho NFC</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #game {
+            width: 100%;
+            max-width: 600px;
+            height: 70vh;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
 
+    <h2>🎮 Super Mario Retro (NFC)</h2>
+
+    <div id="game"></div>
+
+    <script>
+        EJS_player = "#game";
+        EJS_gameUrl = "mario.smc"; 
+        EJS_core = "snes"; 
+        EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/";
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+
+</body>
+</html>

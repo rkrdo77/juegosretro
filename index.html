@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Mario - Cartucho NFC</title>
+    <title>Juegos Retro - Cartuchos NFC</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-color: #111;
             color: #fff;
             font-family: Arial, sans-serif;
             display: flex;
@@ -16,25 +16,37 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
         }
-        #game {
-            width: 100vw;
-            height: 100vh;
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #e50914;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #b20710;
         }
     </style>
 </head>
 <body>
 
-    <div id="game"></div>
+    <h1>🎮 Mis Juegos Retro NFC</h1>
+    <p>Selecciona tu cartucho digital:</p>
 
-    <script type="text/javascript">
-        EJS_player = '#game';
-        // Usamos la URL raw completa de GitHub con cabeceras de CDN para evitar el bloqueo CORS
-        EJS_gameUrl = 'https://raw.githubusercontent.com/rkrdo77/juegosretro/main/mario.smc';
-        EJS_core = 'snes';
-        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
-    </script>
-    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+    <a href="mario.html" class="btn">Super Mario Bros (SNES)</a>
 
 </body>
+</html>
